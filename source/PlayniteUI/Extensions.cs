@@ -7,7 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace PlayniteUI //First commit test
+namespace PlayniteUI
 {
     public static class Extensions
     {
