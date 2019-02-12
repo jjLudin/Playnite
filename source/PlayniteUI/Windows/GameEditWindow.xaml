@@ -356,23 +356,14 @@
                               Visibility="{Binding ShowCheckBoxes, Converter={StaticResource BooleanToVisibilityConverter}}"
                               IsChecked="{Binding UsePlaytimeChanges}"/>
                     <DockPanel Grid.Column="2" Grid.Row="1">
-                        <!--
-                        <TextBlock Text="{Binding EditingGame.Playtime, Converter={pui:LongToTimePlayedConverter}}"
-                                   DockPanel.Dock="Right" />
-                        -->
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="Hr"/>
-                        <controls:NumericBox LongValue="{Binding EditingGame.Playtime}"
-                                             Width="40" HorizontalAlignment="Left"
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{DynamicResource LOCPlaytimeHours}"/>
+                        <controls:NumericBox LongValue="{Binding EditingGame.PlaytimeHours}"
+                                             Width="50" HorizontalAlignment="Left"
                                              MaxLongValue="9999999999"
                                              DockPanel.Dock="Left"/>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="Min"/>
-                        <controls:NumericBox LongValue="{Binding EditingGame.Playtime}"
-                                             Width="40" HorizontalAlignment="Left"
-                                             MaxLongValue="9999999999"
-                                             DockPanel.Dock="Left"/>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="Sec"/>
-                        <controls:NumericBox LongValue="{Binding EditingGame.Playtime}"
-                                             Width="40" HorizontalAlignment="Left"
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{DynamicResource LOCPlaytimeMinutes}"/>
+                        <controls:NumericBox LongValue="{Binding EditingGame.PlaytimeMinutes}"
+                                             Width="50" HorizontalAlignment="Left"
                                              MaxLongValue="9999999999"
                                              DockPanel.Dock="Left"/>
                     </DockPanel>
