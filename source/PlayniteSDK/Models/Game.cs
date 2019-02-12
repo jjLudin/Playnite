@@ -754,8 +754,6 @@ namespace Playnite.SDK.Models
             }
         }
 
-        public object PlaytimeHours { get; set; }
-
         /// <summary>
         /// Creates new instance of a Game object.
         /// </summary>
