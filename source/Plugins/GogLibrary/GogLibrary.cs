@@ -228,7 +228,7 @@ namespace GogLibrary
             {
                 try
                 {
-                    var uninstalled = GetLibraryGames();
+                    var uninstalled = LibrarySettings.UsePublicAccount ? GetLibraryGames(LibrarySettings.AccountName) : GetLibraryGames();
                     logger.Debug($"Found {uninstalled.Count} library GOG games.");
 
                     foreach (var game in uninstalled)
@@ -246,7 +246,7 @@ namespace GogLibrary
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import uninstalled Origin games.");
+                    logger.Error(e, "Failed to import uninstalled GOG games.");
                     importError = e;
                 }
             }
