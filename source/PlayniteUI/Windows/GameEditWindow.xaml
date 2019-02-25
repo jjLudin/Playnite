@@ -358,13 +358,13 @@
                     <DockPanel Grid.Column="2" Grid.Row="1">
                         <TextBlock Grid.Column="1" Grid.Row="1" Text="{DynamicResource LOCPlaytimeHours}"/>
                         <controls:NumericBox LongValue="{Binding EditingGame.PlaytimeHours}"
-                                             Width="50" HorizontalAlignment="Left"
+                                             Width="70" HorizontalAlignment="Left"
                                              MaxLongValue="9999999999"
                                              DockPanel.Dock="Left"/>
                         <TextBlock Grid.Column="1" Grid.Row="1" Text="{DynamicResource LOCPlaytimeMinutes}"/>
                         <controls:NumericBox LongValue="{Binding EditingGame.PlaytimeMinutes}"
-                                             Width="50" HorizontalAlignment="Left"
-                                             MaxLongValue="9999999999"
+                                             Width="70" HorizontalAlignment="Left"
+                                             MaxLongValue="59"
                                              DockPanel.Dock="Left"/>
                     </DockPanel>
 
