@@ -32,9 +32,5 @@ namespace PlayniteUI
         {
             positionManager.RestoreSizeAndLocation();
         }
-
-        private void NumericBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) {
-
-        }
     }
 }
