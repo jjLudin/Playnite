@@ -18,12 +18,12 @@ namespace PlayniteUI
             string[] playtime = v.Split(' ');
 
             string numberOfHours = playtime[0].Substring(0, playtime[0].IndexOf('h'));
-            Int32.TryParse(numberOfHours, out int h);
+            Int32.TryParse(numberOfHours, out int hours);
 
             string numberOfMinutes = playtime[1].Substring(0, playtime[1].IndexOf('m'));
-            Int32.TryParse(numberOfMinutes, out int m);
+            Int32.TryParse(numberOfMinutes, out int minutes);
 
-            int seconds = (h * 60 * 60) + (m * 60);
+            int seconds = (hours * 60 * 60) + (minutes * 60);
 
             if (seconds == 0)
             {
