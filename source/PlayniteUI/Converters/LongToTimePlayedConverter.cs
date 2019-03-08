@@ -14,7 +14,17 @@ namespace PlayniteUI
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            var seconds = (long)value;
+            var v = (string)value;
+            string[] playtime = v.Split(' ');
+
+            string numberOfHours = playtime[0].Substring(0, playtime[0].IndexOf('h'));
+            Int32.TryParse(numberOfHours, out int h);
+
+            string numberOfMinutes = playtime[1].Substring(0, playtime[1].IndexOf('m'));
+            Int32.TryParse(numberOfMinutes, out int m);
+
+            int seconds = (h * 60 * 60) + (m * 60);
+
             if (seconds == 0)
             {
                 return DefaultResourceProvider.FindString("LOCPlayedNone");

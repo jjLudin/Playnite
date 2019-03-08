@@ -358,11 +358,10 @@
                     <DockPanel Grid.Column="2" Grid.Row="1">
                         <TextBlock Text="{Binding EditingGame.Playtime, Converter={pui:LongToTimePlayedConverter}}"
                                    DockPanel.Dock="Right" />
-                        <controls:NumericBox LongValue="{Binding EditingGame.Playtime}"
-                                             MaxLongValue="9999999999"
-                                             ToolTip="{DynamicResource LOCDescriptionPlaytimeSeconds}"
-                                             ToolTipService.Placement="Top" ToolTipService.InitialShowDelay="0"
-                                             DockPanel.Dock="Left" />
+                        <TextBox Text="{Binding EditingGame.Playtime}"
+                                    ToolTip="{DynamicResource LOCDescriptionPlaytimeSeconds}"
+                                    ToolTipService.Placement="Top" ToolTipService.InitialShowDelay="0"
+                                    DockPanel.Dock="Left" />
                     </DockPanel>
 
                     <!-- PlayCount -->
